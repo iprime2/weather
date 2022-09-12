@@ -1,0 +1,140 @@
+.main{
+  width: 50%;
+  height: 100%;
+  padding: 0px 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-main{
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-top{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card-date{
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.card-bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+}
+
+.card-bottom-location{
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.card-bottom-location img{
+  width: 20px;
+  height: 20px;
+}
+
+.card-bottom-location h3{
+  margin-top: -3px;
+}
+
+.bottom-temp-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: -40px;
+  margin-left: auto;
+}
+
+.bottom-temp-container p{
+  font-size: 60px;
+  margin-right: 5px;
+}
+
+.bottom-temp-container section{
+  font-size: 20px;
+  margin-top: 77px;
+}
+
+.bottom-temp-container img{
+  width: 180px;
+  height: 180px;
+}
+
+.weather-text{
+  display: flex;
+  justify-content: flex-end;
+  height: 20px;
+}
+
+.weather-text h5{
+  margin-top: -1px;
+  margin-right: 10px;
+}
+
+.main-footer{
+  width: fit-content;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+
+}
+
+.main-footer img{
+  padding-left: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.main-footer img:hover{
+  cursor: pointer;
+}
+
+.main-footer h5{
+  
+}
+
+.main-footer span{
+  font-weight: bold;
+  margin-top:-2px;
+}
+
+@media only screen and (max-width: 768px){
+  .main{
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 531px){
+  .main{
+    width: 100%;
+    padding: 0;
+  }
+
+  .bottom-temp-container img{
+    margin-top: 20px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .main-footer{
+    margin-right: 15px;
+  }
+}
