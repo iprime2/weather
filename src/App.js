@@ -4,8 +4,6 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Card from './components/card/card';
-import OtherData from './components/otherData/OtherData';
-import Search from './components/search/search';
 import ForecastCards from './components/forecastCards/forecastCards';
 import {nanoid} from 'nanoid'; 
 import CardRight from './components/cardRight/cardRight';
