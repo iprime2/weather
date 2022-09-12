@@ -15,9 +15,9 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
     const keys = "815c12401222465cbec185111220709"
     const [tempCity, setTempCity] = useState()
     const [city, setCity] = useState("Kathmandu");
-    const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=${keys}&q=${city}&aqi=yes&alerts=yes&days=10`;
-    const sportsURL = `http://api.weatherapi.com/v1/sports.json?key=${keys}&q=${city}`;
-    const ipURL = `http://api.weatherapi.com/v1/ip.json?key=${keys}&q=${city}`;
+    const baseURL = `https://api.weatherapi.com/v1/forecast.json?key=${keys}&q=${city}&aqi=yes&alerts=yes&days=10`;
+    const sportsURL = `https://api.weatherapi.com/v1/sports.json?key=${keys}&q=${city}`;
+    const ipURL = `https://api.weatherapi.com/v1/ip.json?key=${keys}&q=${city}`;
     const accuweatherKey = "http://dataservice.accuweather.com/forecasts/v1/daily/10day/"
     const [data, setData] = useState(null);
     const [sports, setSports] = useState(null);
