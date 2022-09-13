@@ -12,19 +12,17 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
   function App() {
     const keys = "815c12401222465cbec185111220709"
     const [tempCity, setTempCity] = useState()
-    const [city, setCity] = useState("Kathmandu");
+    const [city, setCity] = useState();
     const baseURL = `https://api.weatherapi.com/v1/forecast.json?key=${keys}&q=${city}&aqi=yes&alerts=yes&days=10`;
     const sportsURL = `https://api.weatherapi.com/v1/sports.json?key=${keys}&q=${city}`;
-    const ipURL = `https://api.weatherapi.com/v1/ip.json?key=${keys}&q=${city}`;
-    const accuweatherKey = "http://dataservice.accuweather.com/forecasts/v1/daily/10day/"
+    const ipURL = `https://api.weatherapi.com/v1/ip.json?key=${keys}&q=auto:ip`;
     const [data, setData] = useState(null);
     const [sports, setSports] = useState(null);
-    const [ip, setIp] = useState(null);
     const [error, setError] = useState(null);
     
 
     async function API(){
-      await axios.request(baseURL).then((response) => {
+      await axios.get(baseURL).then((response) => {
         setData(response.data)
       }).catch(error => {
           setError(error);
@@ -44,6 +42,7 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
     async function iplookupAPI(){
       await axios.get(ipURL).then((response) => {
         console.log(response)
+        setCity(response.data.city)
       }).catch(error => {
           setError(error);
           console.log(error)
@@ -51,14 +50,18 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
     }
 
     React.useEffect(() => {
-      API();
-      sportsAPI();
+      iplookupAPI();
+    },[])
+
+    React.useEffect(() => {
+      if (city)
+        API();
+        sportsAPI();
       /*if(data)
         if(tempCity != data.location.name)  
           alert("Please enter correct city name")*/
-      //iplookupAPI();
+      
     },[city])
-
 
     function selectCity(event){
       const {name, value} = event.target

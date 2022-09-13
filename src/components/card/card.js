@@ -5,16 +5,16 @@ import './card.css'
 
 
 const Card = ({data}) => {
-    /*const time = new Date().toLocaleTimeString();*/
+    const time = new Date().toLocaleTimeString();
     const date = new Date().toDateString();
-    /*const [currentTime, setCurrentTIme] = useState(time)
+    const [currentTime, setCurrentTIme] = useState(time)
 
     const updateTime = () => {
-        let time = new Date().toLocaleTimeString
+        let time = new Date().toLocaleTimeString()
         setCurrentTIme(time)
     }
 
-    setInterval(updateTime, 1000)*/
+    setInterval(updateTime, 1000)
 
     function refresh(){
         window.location.reload(false);
@@ -30,6 +30,7 @@ const Card = ({data}) => {
         <div className='card-main'>
             <div className='card-top'>
                 <p className='card-date'>{formatDate(date)}</p>
+                <h3>{currentTime}</h3>
             </div>
             <div className='card-bottom'>
                 <div className='card-bottom-location'>
@@ -45,6 +46,7 @@ const Card = ({data}) => {
             </div>
         </div>
         <div className='weather-text'>
+            <h5>Feels Like : {data.current.feelslike_c}°C</h5>
             <h5>{data.current.condition.text}</h5>
         </div>        
         <div className='main-footer'>

@@ -1,16 +1,17 @@
 /* width */
-::-webkit-scrollbar {
+.sports-main::-webkit-scrollbar {
     width: 7px;
   }
   
   /* Track */
-  ::-webkit-scrollbar-track {
+.sports-main::-webkit-scrollbar-track {
     margin-top: 10px;
     margin-bottom: 10px;
+    
   }
    
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+.sports-main::-webkit-scrollbar-thumb {
     background: rgba(176, 176, 176, 0.653);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3.5px);
@@ -20,12 +21,12 @@
   }
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+.sports-main::-webkit-scrollbar-thumb:hover {
     background: rgb(176, 176, 176);
   }
 
 .sports-main{
-    width: 49%;
+    width: 50%;
     height:100%;
     display: flex;
     flex-direction: column;
@@ -60,14 +61,12 @@
     scroll-behavior: smooth;
 }
 
-.selected{
-    background: rgba(159, 159, 159, 0.53);
-}
-
-
-
 .sports-type button:hover{
     cursor: pointer;
+}
+
+.selected{
+    background: rgba(159, 159, 159, 0.53);
 }
 
 .sub{
@@ -115,7 +114,6 @@
     .sports-type button{
         width: 50%;
     }
-
 
 }
 

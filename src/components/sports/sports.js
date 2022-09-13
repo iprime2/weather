@@ -7,30 +7,30 @@ function Sports({sports}) {
     const [football, setFootball] = useState(true)
     const [cricket, setCricket] = useState(false)
 
-        const footballEle = sports.football.map(type => {
-                        return <div className='content'>
-                                    <h3>{type.tournament}</h3>
-                                    <p>{type.match}</p>
-                                    <div className='sub'>
-                                        <img src={stadium} alt='stadium' />
-                                        <p>{type.stadium}</p>
-                                    </div>
-                                </div>
-                    })
+    const footballEle = sports.football.map(type => {
+        return <div className='content'>
+                    <h3>{type.tournament}</h3>
+                    <p>{type.match}</p>
+                    <div className='sub'>
+                        <img src={stadium} alt='stadium' />
+                        <p>{type.stadium}</p>
+                    </div>
+                </div>
+        })
 
         console.log(sports)
         
 
-        const cricketEle = sports.cricket.map(type => {
-                return <div className='content'>
-                            <h3>{type.tournament}</h3>
-                            <p>{type.match}</p>
-                            <div className='sub'>
-                                <img src={stadium} alt='stadium' />
-                                <p>{type.stadium}</p>
-                            </div>
-                        </div>
-            })
+    const cricketEle = sports.cricket.map(type => {
+        return <div className='content'>
+                    <h3>{type.tournament}</h3>
+                    <p>{type.match}</p>
+                    <div className='sub'>
+                        <img src={stadium} alt='stadium' />
+                        <p>{type.stadium}</p>
+                    </div>
+                </div>
+    })
 
     function Toggle(){
         if (football && !cricket){
@@ -49,9 +49,7 @@ function Sports({sports}) {
             <button onClick={Toggle}>Cricket</button>
         </div>
         {sports && football && footballEle}
-
-        
-        {cricketEle}
+        {sports && cricket && cricketEle}
         
     </div>
   )

@@ -12,39 +12,60 @@
 
 .forecast-main h5{
     position:absolute;
-    margin-top: -5px;
+    margin-top: -1px;
+    font-size: 15px;
     margin-left: 15px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    margin-top: -10px;
-    margin-bottom: 10px;
+/* width */
+.forecast-main::-webkit-scrollbar {
+  width: 20px;
+  height: 7px;
+  margin-top: -10px;
   }
+  
+  /* Track */
+.forecast-main::-webkit-scrollbar-track{
 
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-.forecast-cards{
-    margin-top: 15px;
-    background: rgba(255, 255, 255, 0.15);
+  }
+   
+  /* Handle */
+.forecast-main::-webkit-scrollbar-thumb {
+    background: rgba(176, 176, 176, 0.653);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3.5px);
-    -webkit-backdrop-filter: blur(3.5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0 10px;
-    width: 70px;
-    height: 130px;
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto;
-    position: relative;
-    align-items: center;
-    border-radius: 10px;
+    border: 1px solid rgba(10, 10, 10, 0.366);
+    scroll-behavior: smooth;
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+.forecast-main::-webkit-scrollbar-thumb:hover {
+    background: rgb(176, 176, 176);
+  }
+
+
+
+.forecast-cards{
+  width: 70px;
+  height: 130px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  position: relative;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .forecast-cards h4{
+
 
 }
 
@@ -63,4 +84,10 @@
     margin-top: -10px;
     width: fit-content;
     height: fit-content;
+}
+
+@media only screen and (max-width: 531px){
+  .forecast-main{
+      width: 100%;
+  }
 }

@@ -124,11 +124,12 @@
     width: 100%;
     border-bottom: 2px solid black;
     border-right: none;
-    
+    justify-content: center;
   }
 
   .sub-other-main{
-    gap: 55px;
+    justify-content: center;
+    gap: 10px;
     padding-left: 0px 5px;
     display: flex;
     flex-direction: row;

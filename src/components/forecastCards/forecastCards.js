@@ -11,10 +11,10 @@ function forecastCards({hour, data}) {
   const forecastEle = hour.map(item => {
     if (item.time.slice(11,13) > currentTime ) 
       return <div className='forecast-cards'>
-                  <h4>{item.time.slice(11, 16)}</h4>
-                  <img src={item.condition.icon} alt="" />
-                  <p>{Math.round(item.dewpoint_c)}°</p>
-                  {/*<ForecastDetails hour={hour} />*/}
+                <h4>{item.time.slice(11, 16)}</h4>
+                <img src={item.condition.icon} alt="" />
+                <p>{Math.round(item.dewpoint_c)}°</p>
+                {/*<ForecastDetails hour={hour} />*/}
               </div>
     })
   return (

@@ -55,8 +55,9 @@
 }
 
 .app-forecasts{
-  gap:10px
+  gap:10px;
 }
+
 /*.App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -125,4 +126,10 @@
   .search-btn{
       width: 25%;
   }
+
+  .app-forecasts{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
