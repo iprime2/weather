@@ -30,10 +30,17 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border: none;
     font-weight: bold;
+    transition: .5s ease;
 }
 
 .search-btn:hover{
     cursor: pointer;
+    background: transparent;
+    border: 2px solid #799be6;
+    box-shadow: 0 0 10px 0 #799be6 inset,
+                0 0 10px 4px #799be6;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 @media only screen and (max-width: 768px){}

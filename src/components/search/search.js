@@ -1,4 +1,5 @@
 import React from 'react';
+import './search.css';
 
 
 function search({city, selectCity, tempCity, submit}) {
