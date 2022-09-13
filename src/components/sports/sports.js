@@ -22,7 +22,7 @@ function Sports({sports}) {
         
 
     const cricketEle = sports.cricket.map(type => {
-        return <div className='content'>
+        return <div className="skeleton content">
                     <h3>{type.tournament}</h3>
                     <p>{type.match}</p>
                     <div className='sub'>

@@ -28,7 +28,7 @@ const Card = ({data}) => {
   return (
     <div className='main'>
         <div className='card-main'>
-            <div className='card-top'>
+            <div className="skeleton card-top">
                 <p className='card-date'>{formatDate(date)}</p>
                 <h3>{currentTime}</h3>
             </div>
