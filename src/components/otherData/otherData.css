@@ -81,6 +81,43 @@
   margin-top: -2px;
 }
 
+@media only screen and (max-width: 1200px){
+  .bottom-other-main img{
+    width: 58px;
+    height: 58px;
+    margin-top: 5px;
+  }
+  
+  .bottom-other-main p{
+    font-size: 14px;
+  }
+
+  .sub-other-main{
+    display: grid;
+    grid-template: auto auto / repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .bottom-other-main{
+    width: 80%;
+    gap: 80px;
+    margin-left: 10px;
+  }
+
+  .other-main-box{
+    margin-left: 5px;
+    width: 60px;
+    height: 50px;
+  }
+
+  .other-main-box-border-none h6{
+    font-size: 15px;
+  }
+
+  .other-main-box h6{
+    font-size: 15px;
+  }
+}
 
 @media only screen and (max-width: 800px){
   .bottom-other-main img{

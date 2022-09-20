@@ -1,0 +1,140 @@
+.aqi-main{
+    padding: 10px;
+    width: 50%;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aqi-main h3{
+    margin-top:-20px ;
+    font-size: 30px;
+}
+
+.gauge{
+    display: inline-block;
+}
+
+.gauge > div[role=meter] {
+    border-radius: 10rem 10rem 0 0;
+    border: 1px solid black;
+    width: 18rem;
+    height: 10rem;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    background: conic-gradient(from 0deg at 50% 100%,
+    red 30deg, #8f3f97 30deg 60deg,
+    #7e0023 60deg 91deg, transparent 91deg 269deg,
+    #00e400 269deg 300deg, #ffff00 300deg 330deg,
+    #ff7e00 330deg 360deg);
+}
+
+.dial{
+    background-color: #00ff00;
+    transition: background-color 1s,
+                    color .25s;
+    border-radius: 10rem 10rem 0 0;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    z-index: 2;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 1rem #000;
+    border-bottom: none;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.dial.white{
+    color: #fff;
+}
+
+.dial > .arrow {
+    position: absolute;
+    left: calc(50% - .25rem);
+    bottom: 0;
+    width: .5rem;
+    height: calc(98% + 1px);
+    background-color: transparent;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    transition: transform 1s;
+}
+
+.dial > .arrow::after{
+    content: "";
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-top: .5rem solid #000;
+    position: absolute;
+    left: calc(50% - .3rem);
+    top: 0;
+    width: 0;
+    height: 0;
+    transition: border-color .25s;
+}
+
+.dial.white > .arrow::after{
+    border-top-color: #fff;
+}
+
+.aqi-num{
+    margin-top: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.aqi-text{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media (forced-colors: active) {
+    .dial {
+      border: 2px solid black;
+      border-bottom: none;
+    }
+
+    .gauge > div[role=meter]{
+        border-width: 2px;
+        border-bottom: none;
+    }
+
+}
+
+@media only screen and (max-width: 1200px){
+    .gauge > div[role=meter] {
+        border-radius: 6rem 6rem 0 0;
+        width: 11rem;
+        height: 6rem;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .gauge > div[role=meter] {
+        border-radius: 6rem 6rem 0 0;
+        width: 11rem;
+        height: 6rem;
+    }
+}
+
+@media only screen and (max-width: 531px){
+    .aqi-main{
+        width: 100%;
+    }
+    .aqi-main h3{
+        margin-top: 0;
+    }
+
+}   

@@ -11,6 +11,13 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+@media only screen and (max-width: 1200px){
+    .card-right-main{
+        width: 49%;
+        height: 100%;
+    }
+}
+
 @media only screen and (max-width: 780px){
     .card-right-main{
         width: 49%;

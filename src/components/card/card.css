@@ -147,12 +147,35 @@
   margin-top:-2px;
 }
 
-@media only screen and (max-width: 768px){
-  .main{
-    width: 350px;
+@media only screen and (max-width: 1200px){
+  .card-main{
+
+    height: 80%;
+
   }
-  
-  .card-top h3{
+  .card-top > h3{
+    font-size: 40px;
+  }
+
+  .card-bottom{
+  }
+
+  .card-bottom-location{
+    margin-top: 30px;
+  }
+
+  .bottom-temp-container{
+    margin-top: -55px;
+  }
+
+  .bottom-temp-container img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 753px){
+  .card-top > h3{
     font-size: 30px;
     width: 160px;
   }
