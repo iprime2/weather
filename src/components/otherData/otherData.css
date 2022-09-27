@@ -190,46 +190,8 @@
   .other-main-box h6{
     font-size: 15px;
   }
-}
-/* .other-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    margin-left: -30px;
-  }
-  
 
-  
- .other-main ul{
-    display: flex;
-    width: 95%;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 50px;
+  .bottom-other-main{
+    padding-left: 40px;
   }
-  
-  .other-main img{
-    height: 15px;
-    max-width: 15px;
-    margin-right: 3px;
-    margin-bottom: -1px;
-  }
-  
-  .other-main li{
-    list-style: none;
-    margin-top: -30px;
-  }
-  
-  .other-main li h6{
-    display: inline-block;
-    font-size: 15px;
-    margin-right:10px;
-    text-align: justify;
-    color: #444444;
-  }
-  
-  .other-sign{
-    font-size: 10px !important;
-  }*/
+}
