@@ -42,7 +42,7 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
     async function iplookupAPI(){
       await axios.get(ipURL).then((response) => {
         console.log(response)
-        setCity(response.data.city)
+        //setCity(response.data.city)
       }).catch(error => {
           setError(error);
           console.log(error)
