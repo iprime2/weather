@@ -10,9 +10,9 @@ function dailyforecast({daily}) {
 
 
   const dailyForecastELe = daily.map((item, index) => {
-            if (index)
+            //if (index > 0)
                 return <div className='dailyforecast-cards'>
-                          <h3>{formatDate(item.date).slice(0,12)}</h3>
+                          <h3>{formatDate(item.date).slice(0,11)}</h3>
                           <img src={item.day.condition.icon} alt="" />
                           <p>{Math.round(item.day.avgtemp_c)}°</p>
                         </div>
