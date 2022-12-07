@@ -10,7 +10,7 @@ import CardRight from './components/cardRight/cardRight';
 import Dailyforecast from './components/dailyForecast/dailyforecast';
 
   function App() {
-    const keys = "e7f53992d5cc48e8b1d102053222209"
+    const keys = "38c69553beac471c9a5174158220712"
     const [tempCity, setTempCity] = useState()
     const [city, setCity] = useState();
     const baseURL = `https://api.weatherapi.com/v1/forecast.json?key=${keys}&q=${city}&aqi=yes&alerts=yes&days=10`;
