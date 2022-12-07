@@ -12,7 +12,7 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
   function App() {
     const keys = "eac4bed42c4740869f2174456220712"
     const [tempCity, setTempCity] = useState()
-    const [city, setCity] = useState();
+    const [city, setCity] = useState("kathmandu");
     const baseURL = `https://api.weatherapi.com/v1/forecast.json?key=${keys}&q=${city}&aqi=yes&alerts=yes&days=10`;
     const sportsURL = `https://api.weatherapi.com/v1/sports.json?key=${keys}&q=${city}`;
     const ipURL = `https://api.weatherapi.com/v1/ip.json?key=${keys}&q=auto:ip`;
@@ -42,7 +42,7 @@ import Dailyforecast from './components/dailyForecast/dailyforecast';
     async function iplookupAPI(){
       await axios.get(ipURL).then((response) => {
         console.log(response)
-        setCity(response.data.city)
+        //setCity(response.data.city)
       }).catch(error => {
           setError(error);
           console.log(error)
