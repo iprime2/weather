@@ -10,7 +10,7 @@ function dailyforecast({daily}) {
 
 
   const dailyForecastELe = daily.map((item, index) => {
-            if (index > 0)
+            if (index)
                 return <div className='dailyforecast-cards'>
                           <h3>{formatDate(item.date).slice(0,12)}</h3>
                           <img src={item.day.condition.icon} alt="" />
